@@ -21,7 +21,7 @@ No additional third-party toolboxes are required.
 The scripts assume the following directory structure:
 
 ```
-(root)/
+(project_root)/
 ├── Mfile/          # Analysis scripts (this repository)
 └── Mat_file/
     ├── Hexoskin_data.mat
@@ -74,5 +74,3 @@ The following data files are included in `Mat_file/`. Sampling rates: respiratio
 - All scripts use relative paths based on the `Mfile/` working directory. Before running, set the MATLAB working directory to `Mfile/`.
 - The `A02` surrogate test uses a fixed random seed (`rng(20260205)`) for reproducibility.
 - The 15 dyads in `A02` are formed from 6 performers and are therefore not statistically independent. The circular-shift surrogate test is the primary inferential test; the one-sample t-test is reported for descriptive purposes only (see manuscript for details).
-- To analyze additional event types in `A03`, add the event type name to the `event_types` variable at the top of the script. The type must exist as a field in `MusicalEvent.mat`.
-
