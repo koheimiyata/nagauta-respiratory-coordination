@@ -22,11 +22,12 @@ The scripts assume the following directory structure:
 
 ```
 (project_root)/
-├── Mfile/          # Analysis scripts (this repository)
-└── Mat_file/
-    ├── Hexoskin_data.mat
-    ├── SectionTimepoint.mat
-    └── MusicalEvent.mat
+└── Analysis/
+    ├── Mfile/          # Analysis scripts
+    └── Mat_file/
+        ├── Hexoskin_data.mat
+        ├── SectionTimepoint.mat
+        └── MusicalEvent.mat
 ```
 
 ---
