@@ -40,7 +40,7 @@ Scripts are prefixed with `A` and can be run independently in any order.
 
 | Script | Description |
 |--------|-------------|
-| `A01_dtw_self_vs_other.m` | Compute normalized DTW distance between same-role (self-pairing) and different-role (other-pairing) respiration signals across takes; primary inference via exhaustive label-permutation test (6! = 720 permutations); paired t-test and Cohen's *d*z reported as descriptive measures |
+| `A01_dtw_self_vs_other.m` | Compute normalized DTW distance between same-performer (self-pairing) and different-performer (other-pairing) respiration signals across takes; primary inference via exhaustive label-permutation test (6! = 720 permutations); paired t-test and Cohen's *d*z reported as descriptive measures |
 | `A02_interperformer_correlation.m` | Compute lag-0 Pearson correlation (Fisher z) for all 15 performer dyads across sections and takes; primary inference via circular-shift surrogate test (1,000 iterations); one-sample t-test reported as descriptive measure |
 | `A03_event_locked_respiration.m` | Extract and average thoracic respiration in a ±10 s window around each event type (Decel, Komi, Section); assess modulation against a 95% pointwise surrogate envelope from 1,000 random-event-time surrogates |
 
@@ -60,6 +60,12 @@ A03_event_locked_respiration
 
 ## Data
 
+The audiovisual recordings and the full dataset associated with this study are publicly available on the Open Science Framework (OSF):
+
+**OSF project:** https://osf.io/638v9/
+
+The MATLAB files included in `Mat_file/` contain the data required to reproduce the analyses implemented in this repository. The OSF project additionally provides the original audiovisual recordings and associated corpus materials.
+
 The following data files are included in `Mat_file/`. Sampling rates: respiration_thoracic 128 Hz, ECG 256 Hz, Acceleration 64 Hz. All event and section times are in milliseconds relative to the start of each take.
 
 | File | Variable | Description |
@@ -75,3 +81,19 @@ The following data files are included in `Mat_file/`. Sampling rates: respiratio
 - All scripts use relative paths based on the `Mfile/` working directory. Before running, set the MATLAB working directory to `Mfile/`.
 - The `A02` surrogate test uses a fixed random seed (`rng(20260205)`) for reproducibility.
 - The 15 dyads in `A02` are formed from 6 performers and are therefore not statistically independent. The circular-shift surrogate test is the primary inferential test; the one-sample t-test is reported for descriptive purposes only (see manuscript for details).
+
+---
+
+## Citation
+
+If you use the analysis code or results from this repository, please cite:
+
+> Miyata K, Kamata S, Shimizu D, Takaoka A, Clayton M, & Kudo K. (2026).
+> Acting together beyond synchrony: Event-dependent alignment of breathing in an expert musical ensemble.
+> *Acta Psychologica*. [DOI]
+
+For the audiovisual recordings and associated corpus data, please also cite:
+
+> Kamata S, Clayton M, Takaoka A, Kudo K, Miyata K, & Shimizu D. (2026).
+> Nagauta-bayashi [Dataset].
+> https://osf.io/638v9/
