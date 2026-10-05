@@ -90,7 +90,7 @@ If you use the analysis code or results from this repository, please cite:
 
 > Miyata K, Kamata S, Shimizu D, Takaoka A, Clayton M, & Kudo K. (2026).
 > Acting together beyond synchrony: Event-dependent alignment of breathing in an expert musical ensemble.
-> *Acta Psychologica*. [DOI]
+> *Acta Psychologica*. 270, 107839, https://doi.org/10.1016/j.actpsy.2026.107839
 
 For the audiovisual recordings and associated corpus data, please also cite:
 
